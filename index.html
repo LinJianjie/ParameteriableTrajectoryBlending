@@ -1,0 +1,76 @@
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="format-detection" content="telephone=no">
+  <meta name="viewport"
+    content="initial-scale=1.0, maximum-scale=1.0, user-scalable=no, width=device-width">
+  <link href="stylesheet.css" rel="stylesheet" type="text/css">
+  <link href="roboto.css" rel="stylesheet" type="text/css">
+  <link href="roboto_mono.css" rel="stylesheet" type="text/css">
+  <!--link href="http://fonts.cdnfonts.com/css/roboto" rel="stylesheet" type="text/css"-->
+  <title>Parameterizable and Jerk-Limited Trajectories</title>
+
+</head>
+
+<body>
+  <p align="center">2021 International Conference on Robotics and Automation (IRCA)</p>
+
+  <h1>Parameterizable and Jerk-Limited Trajectories with Blending for Robot Motion Planning and Spherical Cartesian Waypoints</h1>
+  <p align="center">Jianjie Lin, Markus Rickert, Alois Knoll<br />Robotics,
+    Artificial Intelligence and Real-time
+    Systems<br />Department of Informatics, Technische Universität München</p>
+  <p align="center"><a class="chip"
+      href="https://doi.org/10.1109/ICRA48506.2021.9561601">DOI</a> <a
+      class="chip"
+      href="https://mediatum.ub.tum.de/doc/1614584/xs7blx45xiwr7lqfc0z3fr01k.trajectoryBlending.pdf">preprint</a>
+    <a class="chip" href="bibtex.txt">BibTeX</a> 
+  </p>
+  <h2>Abstract</h2>
+  <p style="font-size:20px;">
+    This paper presents two different approaches to generate a time local-optimal and jerk-limited trajectory with blends for a robot manipulator under consideration of kinematic constraints. The first approach generates a trajectory with blends based on the trapezoidal acceleration model by formulating the problem as a nonlinear constraint and a non-convex optimization problem. The resultant trajectory is locally optimal and approximates straight-line movement while satisfying the robot manipulator's constraints. We apply the bridged optimization strategy to reduce the computational complexity, which borrows an idea from model predictive control by dividing all waypoints into consecutive batches with an overlap of multiple waypoints. We successively optimize each batch. The second approach is a combination of a trapezoidal acceleration model with a 7-degree polynomial to form a path with blends. It can be efficiently computed given the specified blending parameters. The same approach is extended to Cartesian space. Furthermore, a quaternion interpolation with a high degree polynomial under consideration of angular kinematics is introduced. Multiple practical scenarios and trajectories are tested and evaluated against other state-of-the-art approaches.</p>
+  <h2>Quantitative Evaluation</h2>
+  <h3>Evaluation of Deviation from Straight-Line in Joint Space</h3>
+  <div class="Imagerow">
+    <div class="Imagecolumn">
+      <img src="./images/kukaiso.jpg" alt="Linear Parabolic" style="width:100%">
+    </div>
+    <div class="Imagecolumn">
+      <img src="./images/results.png" alt="Cublic Spline" style="width:200%">
+    </div>
+  </div> 
+  <p>Comparison of joint space trajectories for the ISO cube scenario. The plots show the first and second DOF of different algorithms. The straight line reference in joint space is shown in <span style="color:#FF0000">red</span>, the calculated joint trajectory in <span style="color:#0000ff">red</span></p>
+  <h3>Comparison between TO-BAV, TOPP-RA and TPBJ</h3>
+  <figure>
+    <img src="./images/comparison1.png">
+    </figcaption>
+  </figure>
+  <p>Comparison of results from TO-BAV , TOPP-RA and TPBJ with increasing jerk constraints. (a)–(e) show the plot of first and third DOF with generated trajectory (<span style="color:#0000ff">blue</span>) and target straight-line path (<span style="color:#FF0000">red</span>). (f)–(j) is the velocity profile. (k)–(o) is the acceleration profile. In our approach, TPBJ gradually increases jerk constraints from 𝑗<sub>max</sub> = {5, 100, 10000}𝑣<sub>max</sub</p>
+
+  <h3>Evaluation of the Algorithm in a Real Robot Workcell</h3>
+  <figure>
+    <img src="./images/comparison2.jpg">
+    </figcaption>
+  </figure>
+  <p>A comparison of different trajectory profiles for the UR5 example. The individual plots (a)-(e) show position, (f)-(j) velocity with the controller's target (red) and actual~(<span style="color:#0000ff">blue</span>) value, (k)-(o) robot position difference between desired and actual and corresponding velocity differences.
+  </sub</p>
+
+
+  <h2>Reference</h2>
+  <p>For more detailed information please have a look at our IROS paper. The
+    reference is</p>
+  <p>Jianjie Lin, Markus Rickert, Alois Knoll. <a href="">Parameterizable and Jerk-Limited Trajectories with Blending for Robot Motion Planning and Spherical Cartesian Waypoints</a>, In <i>2021 International Conference on Robotics and Automation (IRCA)</i>, Xi'an, China, May. 2021.</p>
+  <pre><code>@InProceedings{paramTraj2021,
+    author={Lin, Jianjie and Rickert, Markus and Knoll, Alois},
+    booktitle={2021 IEEE International Conference on Robotics and Automation (ICRA)}, 
+    title={Parameterizable and Jerk-Limited Trajectories with Blending for Robot Motion Planning and Spherical Cartesian Waypoints}, 
+    year={2021},
+    volume={},
+    number={},
+    pages={13982-13988},
+    doi={10.1109/ICRA48506.2021.9561601}}
+      }
+  </code></pre>
+</body>
+
+</html>

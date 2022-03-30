@@ -1,0 +1,11 @@
+@InProceedings{paramTraj2021,
+  author={Lin, Jianjie and Rickert, Markus and Knoll, Alois},
+  booktitle={2021 IEEE International Conference on Robotics and Automation (ICRA)}, 
+  title={Parameterizable and Jerk-Limited Trajectories with Blending for Robot Motion Planning and Spherical Cartesian Waypoints}, 
+  year={2021},
+  volume={},
+  number={},
+  pages={13982-13988},
+  doi={10.1109/ICRA48506.2021.9561601}}
+    }
+
